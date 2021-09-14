@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from .database import query
 
 app = Flask(__name__)
 
@@ -10,4 +11,5 @@ app.jinja_env.strip_trailing_newlines = True
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    clients = query("select * from clients")
+    return render_template("index.html", clients=clients)

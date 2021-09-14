@@ -8,8 +8,29 @@ Flask project
 
 {% block content %}
 
-Content goes here
-
 {{ alert("hello") }}
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Telephone</th>
+            <th>Email</th>
+            <th>Address ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for client in clients %}
+        <tr>
+            <td>{{ client.idc }}</td>
+            <td>{{ client.first_name }}</td>
+            <td>{{ client.telephone }}</td>
+            <td>{{ client.mail }}</td>
+            <td>{{ client.address_id }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 {% endblock %}

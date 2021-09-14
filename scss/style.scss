@@ -21,3 +21,10 @@ body {
         @extend .btn-close;
     }
 }
+
+table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-hover;
+    @extend .table-sm;
+}

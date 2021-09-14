@@ -11,7 +11,7 @@ def establish_connection(user, password, db):
 
     try:
         connection = connect(f"postgres://{user}:{password}@127.0.0.1/{db}")
-        connection = connect(env["DATABASE_URL"], sslmode="require")
+        # connection = connect(env["DATABASE_URL"], sslmode="require")
         connection.autocommit = True
         return connection
 
