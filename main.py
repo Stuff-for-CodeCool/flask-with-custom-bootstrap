@@ -15,9 +15,4 @@ def index():
 
 
 if __name__ == "__main__":
-    from os import system
-
-    system("cp ./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js ./static/bootstrap.js")
-    system("npm run build")
-
     app.run(debug=True)
