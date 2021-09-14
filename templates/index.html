@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% from "components/alert.html" import alert %}
+
+{% block title %}
+Flask project
+{% endblock %}
+
+{% block content %}
+
+Content goes here
+
+{{ alert("hello") }}
+
+{% endblock %}

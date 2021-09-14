@@ -1,0 +1,23 @@
+//  Change Bootstrap variables
+@import "variables";
+//  Uncomment Bootstrap components
+@import "bootstrap";
+
+//  Add custom styles
+body {
+    @extend .container;
+}
+
+.alert {
+    @extend .alert;
+    @extend .fade;
+    @extend .show;
+
+    a {
+        @extend .alert-link;
+    }
+
+    button {
+        @extend .btn-close;
+    }
+}

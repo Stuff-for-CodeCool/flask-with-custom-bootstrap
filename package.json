@@ -1,0 +1,16 @@
+{
+    "scripts": {
+        "build": "node-sass --include-path node_modules --output-style compressed --precision 6 scss -o static/ && postcss --replace static/style.css --use autoprefixer && purgecss --keyframes --css static/style.css --content templates/ \"node_modules/bootstrap/js/dist/\" --output static/"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.3.4",
+        "node-sass": "^6.0.1",
+        "postcss": "^8.3.6",
+        "postcss-cli": "^8.3.1",
+        "purgecss": "^4.0.3"
+    },
+    "dependencies": {
+        "bootstrap": "^5.1.1",
+        "bootstrap-icons": "^1.5.0"
+    }
+}
